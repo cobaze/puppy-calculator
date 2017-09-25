@@ -1,51 +1,57 @@
-function dogAgeFunction () {
-    var displayYear = document.getElementById('dogYearSection');
-    var displayAge = document.getElementById('dogAgeSection');
-
-    if(yesRadio.checked == true) {
-	    displayAge.style.display = 'none';
-        displayYear.style.display = 'block';
-    }else if(noRadio.checked == true) {
-	    displayYear.style.display = 'none';
-        displayAge.style.display = 'block';
-    };
-};
-
-var yesRadio = document.getElementById('yes');
-yesRadio.addEventListener('click', dogAgeFunction);
-
-var noRadio = document.getElementById('no');
-noRadio.addEventListener('click', dogAgeFunction);
-
 function yearInput () {
-    var yearNumber = document.getElementById('dogYear').value;
-    var dogAgeCalculations = 2017 - parseInt(yearNumber);
-    if(dogAgeCalculations > 15){
-	    var result = dogAgeCalculations + 9;
-	    var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + result + ' Dog Years Old';
-    } else if (dogAgeCalculations == 15){
-	    var dogAgeCalculations = 1;
-	    var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Dog Years Old';
-    }
-    
-    if(dogAgeCalculations > 24){
-	    var newResult = dogAgeCalculations + 4;
-	    var newDisplay = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + newResult + ' Dog Years Old';
-    } else if (dogAgeCalculations < 15){
-	    var display = document.getElementById('ageDisplay')
-.innerHTML =  'You Dog is Not Up to a Year yet. ';}
-//     var display = document.getElementById('ageDisplay').innerHTML = "In Human Years Your Dog is: " + dogAgeCalculations;
-
+    var dogAgeCalculations = document.getElementById('dogYear').value;
+    if(dogAgeCalculations == 1){
+	    var dogAgeCalculations = 15;
+	    var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 2){
+	    var dogAgeCalculations = 24;
+	    var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 3) {
+	    var dogAgeCalculations = 28;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 4) {
+	    var dogAgeCalculations = 32;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 5) {
+	    var dogAgeCalculations = 36;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 6) {
+	    var dogAgeCalculations = 40;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 7) {
+	    var dogAgeCalculations = 44;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 8) {
+	    var dogAgeCalculations = 48;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 9) {
+	    var dogAgeCalculations = 52;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 10) {
+	    var dogAgeCalculations = 56;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 11) {
+	    var dogAgeCalculations = 60;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 12) {
+	    var dogAgeCalculations = 64;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 13) {
+	    var dogAgeCalculations = 68;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 14) {
+	    var dogAgeCalculations = 72;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 15) {
+	    var dogAgeCalculations = 76;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else if (dogAgeCalculations == 16) {
+	    var dogAgeCalculations = 80;
+		var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + dogAgeCalculations + ' Human Years Old';
+    } else {
+	    var display = document.getElementById('ageDisplay').innerHTML = 'The number you entered is invalid';
+    } 
 }
 
 var userInput = document.getElementById('enterDogYear');
 userInput.addEventListener('click', yearInput);
-
-
-function ageInput (){
-	var ageNumber = document.getElementById('dogAge').value;
-	
-	if(ageNumber > 100){
-		alert('Error, You Have Entered an Invalid Age Number');
-	} 
-}
