@@ -18,8 +18,8 @@ var noRadio = document.getElementById('no');
 noRadio.addEventListener('click', dogAgeFunction);
 
 function yearInput () {
-    var ageNumber = document.getElementById('dogYear').value;
-    var dogAgeCalculations = 2017 - parseInt(ageNumber);
+    var yearNumber = document.getElementById('dogYear').value;
+    var dogAgeCalculations = 2017 - parseInt(yearNumber);
     if(dogAgeCalculations > 15){
 	    var result = dogAgeCalculations + 9;
 	    var display = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + result + ' Dog Years Old';
@@ -33,7 +33,7 @@ function yearInput () {
 	    var newDisplay = document.getElementById('ageDisplay').innerHTML = 'Your Dog is: ' + newResult + ' Dog Years Old';
     } else if (dogAgeCalculations < 15){
 	    var display = document.getElementById('ageDisplay')
-.innerHTML =  'You Dog is Not Up to a Year yet. ';   }
+.innerHTML =  'You Dog is Not Up to a Year yet. ';}
 //     var display = document.getElementById('ageDisplay').innerHTML = "In Human Years Your Dog is: " + dogAgeCalculations;
 
 }
@@ -43,5 +43,9 @@ userInput.addEventListener('click', yearInput);
 
 
 function ageInput (){
+	var ageNumber = document.getElementById('dogAge').value;
 	
+	if(ageNumber > 100){
+		alert('Error, You Have Entered an Invalid Age Number');
+	} 
 }
