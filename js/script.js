@@ -42,8 +42,6 @@ var userInput = document.getElementById('enterDogYear');
 userInput.addEventListener('click', yearInput);
 
 
-/*
 function ageInput (){
 	
 }
-*/
